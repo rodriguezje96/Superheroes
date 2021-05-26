@@ -1,12 +1,10 @@
 const CharWrapper = (props) => {
+    let chars = props.team.map(function (item){
+        return <Character character={item}></Character>;
+    });
     return (
-        <div className="row">
-            <Character character={props.team[0]}></Character>
-            <Character character={props.team[1]}></Character>
-            <Character character={props.team[2]}></Character>
-            <Character character={props.team[3]}></Character>
-            <Character character={props.team[4]}></Character>
-            <Character character={props.team[5]}></Character>
+        <div className="row"> 
+        {chars}
         </div>
     );
 }
