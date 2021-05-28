@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 const CharWrapper = (props) => {
     let chars = props.team.map(function (item){
         return <Character character={item}></Character>;
@@ -28,7 +29,9 @@ const Character = (props) => {
                 <p className="card-text col-6">{props.character.powerstats.power}</p>
                 <p className="card-text col-6">combat</p>
                 <p className="card-text col-6">{props.character.powerstats.combat}</p>
-                <a href="#" className="btn btn-success col-6">Details</a>
+                <Link to={{ 
+                    pathname: '/charprofile', 
+                    state: {charInfo: props.character} }}  className="btn btn-success col-6">Details</Link>
                 <a href="#" className="btn btn-danger col-6">Delete</a>
 
             </div>

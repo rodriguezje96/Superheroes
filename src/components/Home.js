@@ -1,7 +1,11 @@
 import CharWrapper from './CharWrapper';
 import team from '../mock/team.json'
-
-const Home = () => {
+import { Redirect } from "react-router-dom";
+import React, { Component } from 'react';
+const Home = () => {     
+    if (!localStorage.getItem("token")) {
+    return <Redirect to="/login" />
+  }
     return (
         <div>
             <SearchBar></SearchBar>

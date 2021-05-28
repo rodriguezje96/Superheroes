@@ -8,10 +8,10 @@ function App() {
   return (
     <HashRouter>
       <div className="App">
-      <Route path={["/Login"]} component={() => <Login />} />
-      <Route path={["/Home"]} component={() => <Home />} />
-      <Route path={["/CharProfile"]} component={() => <CharProfile />} />
-      <Route path={["/SearchResult"]} component={() => <SearchResult />} />
+      <Route path={["/login"]} component={() => <Login />} />
+      <Route path={["/home"]} component={() => <Home />} />
+      <Route path={["/charProfile"]} component={CharProfile}/>
+      <Route path={["/searchResult"]} component={() => <SearchResult />} />
 
       </div>
     </HashRouter>
