@@ -6,8 +6,9 @@ class Login extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      "email": "",
-      "password": ""
+      email: "",
+      password: "",
+      token: ""
     }
   }
   handleEmail(event) {
@@ -22,6 +23,7 @@ class Login extends Component {
       axios.post("http://challenge-react.alkemy.org/", this.state)
         .then((response) => {
           localStorage.setItem("token", response.data.token);
+          this.setState({ token: response.data.token});
         })
         .catch((error) => {
           alert("");
@@ -35,7 +37,7 @@ class Login extends Component {
   render() {
 
     if (localStorage.getItem("token")) {
-     return <Redirect to="/home" />
+    return <Redirect to="/home" />
     }
     return (
 
