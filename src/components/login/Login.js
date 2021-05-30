@@ -26,7 +26,7 @@ class Login extends Component {
           this.setState({ token: response.data.token});
         })
         .catch((error) => {
-          alert("");
+          alert("Try Again");
         })
 
     }
