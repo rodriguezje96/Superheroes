@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import { Redirect } from "react-router-dom";
+import "./login.css"
 class Login extends Component {
   constructor(props) {
     super(props);
@@ -34,11 +35,11 @@ class Login extends Component {
   render() {
 
     if (localStorage.getItem("token")) {
-      return <Redirect to="/home" />
+     return <Redirect to="/home" />
     }
     return (
 
-      <form>
+      <form className="login container">
         <div className="form-group">
           <label htmlFor="email">Name:</label>
           <input type="text" className="form-control" id="email" name="email" onChange={(event) => this.handleEmail(event)}></input>

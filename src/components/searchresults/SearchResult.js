@@ -1,6 +1,5 @@
-import CharWrapper from './CharWrapper';
+import CharWrapper from '../charwrapper/CharWrapper';
 import { Redirect } from "react-router-dom";
-import React, { Component } from 'react';
 const SearchResult  = () => {
     if (!localStorage.getItem("token")) {
         return <Redirect to="/login" />
@@ -8,7 +7,7 @@ const SearchResult  = () => {
     return ( 
         <div>
             <h2>Results</h2>
-            <CharWrapper></CharWrapper>
+            <CharWrapper team={[]}></CharWrapper>
         </div>
      );
 }

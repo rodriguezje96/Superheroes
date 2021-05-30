@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 const CharWrapper = (props) => {
     let chars = props.team.map(function (item){
-        return <Character character={item}></Character>;
+        return <CardCharacter character={item} deleteChar={props.deleteChar}></CardCharacter>;
     });
     return (
         <div className="row"> 
@@ -11,9 +11,9 @@ const CharWrapper = (props) => {
 }
 
 
-const Character = (props) => {
+const CardCharacter = (props) => {
     return (
-        <div className="card col-6 col-lg-2">
+        <div className="card col-6 col-lg-4">
             <img className="card-img-top" src={props.character.image.url} alt="Card image"></img>
             <div className="card-body row">
                 <h4 className="card-title col-12">{props.character.name}</h4>
@@ -32,7 +32,7 @@ const Character = (props) => {
                 <Link to={{ 
                     pathname: '/charprofile', 
                     state: {charInfo: props.character} }}  className="btn btn-success col-6">Details</Link>
-                <a href="#" className="btn btn-danger col-6">Delete</a>
+                <button  className="btn btn-danger col-6" onClick={() => props.deleteChar(props.character.id)}>Delete</button>
 
             </div>
         </div>
