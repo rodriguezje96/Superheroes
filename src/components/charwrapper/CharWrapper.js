@@ -13,8 +13,8 @@ const CharWrapper = (props) => {
 
 const CardCharacter = (props) => {
     return (
-        <div className="card col-6 col-lg-4">
-            <img className="card-img-top" src={props.character.image.url} alt="Card image"></img>
+        <div className="card col-8 col-lg-4 mx-auto">
+            <img className="card-img-top" src={props.character.image.url} alt="Hero Avatar"></img>
             <div className="card-body row">
                 <h4 className="card-title col-12">{props.character.name}</h4>
                 <p className="card-text col-6">Intelligence</p>

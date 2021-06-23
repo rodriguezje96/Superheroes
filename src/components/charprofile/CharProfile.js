@@ -18,7 +18,7 @@ class CharProfile extends Component {
         return (
             <div className="row ">
                 <div className="col-3">
-                    <img className="card-img-top img-thumbnail" src={this.state.character?.image.url} alt="Card image"></img>
+                    <img className="card-img-top img-thumbnail" src={this.state.character?.image.url} alt="Hero Avatar"></img>
                 </div>
 
                 <div className="col-9">

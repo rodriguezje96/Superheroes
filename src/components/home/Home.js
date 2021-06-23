@@ -3,6 +3,7 @@ import team from '../../mock/team.json'
 import { Redirect } from "react-router-dom";
 import React, { Component } from 'react';
 import axios from 'axios';
+import "./home.css"
 class Home extends Component {
     constructor(props) {
         super(props);
@@ -25,7 +26,7 @@ class Home extends Component {
             <div>
                 <SearchBar></SearchBar>
                 <LogoutButton></LogoutButton>
-                <Instrucciones></Instrucciones>
+                <Instruccions></Instruccions>
                 <Stats></Stats>
                 <CharWrapper team={this.state.team} deleteChar={this.deleteChar.bind(this)}></CharWrapper>
             </div>
@@ -73,7 +74,7 @@ class SearchBar extends Component {
     }
 }
 
-const Instrucciones = () => {
+const Instruccions = () => {
     return (
         <div>
             <h2>Instructions</h2>
@@ -118,7 +119,7 @@ const Stats = () => {
     );
 }
 const LogoutButton = () => {
-    return <button className="btn btn-danger" onClick={() =>{
+    return <button className="btn btn-danger float-right" onClick={() =>{
         localStorage.removeItem("token")
     }}>Logout</button>
 }
