@@ -2,5 +2,6 @@
   text-align: center;
   background: rgb(23,162,184);
   background: linear-gradient(0deg, rgba(23,162,184,1) 33%, rgba(0,255,179,1) 100%);
-  height: 100vh;
+  min-height: 100vh;
+  width: 100%;
 }
