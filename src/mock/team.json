@@ -52,12 +52,12 @@
     "id": "64",
     "name": "Batgirl",
     "powerstats": {
-      "intelligence": "null",
+      "intelligence": "15",
       "strength": "27",
-      "speed": "null",
-      "durability": "null",
-      "power": "null",
-      "combat": "null"
+      "speed": "15",
+      "durability": "15",
+      "power": "15",
+      "combat": "15"
     },
     "biography": {
       "full-name": "Mary Elizabeth Kane",
@@ -73,7 +73,7 @@
     },
     "appearance": {
       "gender": "Female",
-      "race": "null",
+      "race": "15",
       "height": [
         "-",
         "0 cm"
@@ -101,12 +101,12 @@
     "id": "65",
     "name": "Batgirl III",
     "powerstats": {
-      "intelligence": "null",
+      "intelligence": "15",
       "strength": "43",
-      "speed": "null",
-      "durability": "null",
-      "power": "null",
-      "combat": "null"
+      "speed": "15",
+      "durability": "15",
+      "power": "15",
+      "combat": "15"
     },
     "biography": {
       "full-name": "Helena Rosa Bertinelli",
@@ -121,7 +121,7 @@
     },
     "appearance": {
       "gender": "Female",
-      "race": "null",
+      "race": "15",
       "height": [
         "-",
         "0 cm"
@@ -198,12 +198,12 @@
     "id": "67",
     "name": "Batgirl V",
     "powerstats": {
-      "intelligence": "null",
-      "strength": "null",
-      "speed": "null",
-      "durability": "null",
-      "power": "null",
-      "combat": "null"
+      "intelligence": "15",
+      "strength": "15",
+      "speed": "15",
+      "durability": "15",
+      "power": "15",
+      "combat": "15"
     },
     "biography": {
       "full-name": "Charlotte Gage-Radcliffe",
@@ -218,7 +218,7 @@
     },
     "appearance": {
       "gender": "Female",
-      "race": "null",
+      "race": "15",
       "height": [
         "-",
         "0 cm"
@@ -269,7 +269,7 @@
     },
     "appearance": {
       "gender": "Female",
-      "race": "null",
+      "race": "15",
       "height": [
         "5'6",
         "168 cm"

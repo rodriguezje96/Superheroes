@@ -23,7 +23,7 @@ class Login extends Component {
       axios.post("http://challenge-react.alkemy.org/", this.state)
         .then((response) => {
           localStorage.setItem("token", response.data.token);
-          this.setState({ token: response.data.token});
+          this.setState({ token: response.data.token });
         })
         .catch((error) => {
           alert("Try Again");
@@ -37,20 +37,22 @@ class Login extends Component {
   render() {
 
     if (localStorage.getItem("token")) {
-    return <Redirect to="/home" />
+      return <Redirect to="/home" />
     }
     return (
 
-      <form className="login container">
-        <div className="form-group">
-          <label htmlFor="email">Name:</label>
-          <input type="text" className="form-control" id="email" name="email" onChange={(event) => this.handleEmail(event)}></input>
+      <form className="container row mx-auto">
+        <div className="login col-12 col-md-12">
+          <div className="form-group">
+            <label htmlFor="email">Name:</label>
+            <input type="text" className="form-control" id="email" name="email" onChange={(event) => this.handleEmail(event)}></input>
+          </div>
+          <div className="form-group">
+            <label htmlFor="pwd">Password:</label>
+            <input type="password" className="form-control" id="pwd" name="password" onChange={(event) => this.handlePassword(event)}></input>
+          </div>
+          <button type="button" class="btn btn-success" onClick={() => this.login()}>Login</button>
         </div>
-        <div className="form-group">
-          <label htmlFor="pwd">Password:</label>
-          <input type="password" className="form-control" id="pwd" name="password" onChange={(event) => this.handlePassword(event)}></input>
-        </div>
-        <button type="button" class="btn btn-success" onClick={() => this.login()}>Login</button>
       </form>
     );
   }

@@ -16,7 +16,12 @@ export default class SearchBar extends Component {
 
     searchResult() {
         if (this.state.search !== "") {
-            axios.get("https://superheroapi.com/api/1009301669473874/search/" + this.state.search)
+            axios.get("https://superheroapi.com/api/1009301669473874/search/" + this.state.search, {headers: {
+                "Content-Type": "application/json",
+                "Access-Control-Allow-Origin": "*",
+                "Access-Control-Allow-Methods": "GET, POST, PATCH, PUT, DELETE, OPTIONS",
+                "Access-Control-Allow-Headers": "Origin, Content-Type, X-Auth-Token, Authorization, Accept,charset,boundary,Content-Length"
+            }})
                 .then((response) => {
                     this.setState({ results: response.data.results })
 

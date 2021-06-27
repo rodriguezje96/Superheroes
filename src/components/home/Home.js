@@ -30,6 +30,30 @@ class Home extends Component {
         this.setState({}) 
     }
 
+    getStatsTeam() {
+        var stats={
+            intelligence: this.state.team.map(function (hero) {
+                return parseInt(hero.powerstats.intelligence);
+            }),
+            strength: this.state.team.map(function (hero) {
+                return parseInt(hero.powerstats.strength);
+            }),
+            speed: this.state.team.map(function (hero) {
+                return parseInt(hero.powerstats.speed);
+            }),
+            durability: this.state.team.map(function (hero) {
+                return parseInt(hero.powerstats.durability);
+            }),
+            power: this.state.team.map(function (hero) {
+                return parseInt(hero.powerstats.power);
+            }),
+            combat: this.state.team.map(function (hero) {
+                return parseInt(hero.powerstats.combat);
+            }),
+        }
+        return stats;
+    }
+
     render() {
         if (!localStorage.getItem("token")) {
             return <Redirect to="/login" />
@@ -39,8 +63,8 @@ class Home extends Component {
                 <SearchBar></SearchBar>
                 <LogoutButton deleteToken={this.deleteToken}></LogoutButton>
                 <Instructions></Instructions>
-                <Stats></Stats>
-                <CharWrapper team={this.state.team} deleteChar={this.deleteChar}></CharWrapper>
+                <Stats stats={this.getStatsTeam()}></Stats>
+                <CharWrapper team={this.state.team} deleteChar={this.deleteChar} delete={true}></CharWrapper>
             </div>
 
         );

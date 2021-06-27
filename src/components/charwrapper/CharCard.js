@@ -1,5 +1,7 @@
 import { Link } from "react-router-dom";
 import './CharCard.css';
+import DeleteChar from './DeleteChar';
+import AddChar from './AddChar';
 const CharCard = (props) => {
     return (
         <div className="col-8 col-lg-4 mx-auto">
@@ -23,7 +25,8 @@ const CharCard = (props) => {
                     pathname: '/charprofile',
                     state: { charInfo: props.character }
                 }} className="btn btn-success col-6">Details</Link>
-                <button className="btn btn-danger col-6" onClick={() => props.deleteChar(props.character.id)}>Delete</button>
+               {props.delete && <DeleteChar {...props}></DeleteChar>}
+               {props.add && <AddChar {...props}></AddChar>} 
             </div>
             </div>
         </div>

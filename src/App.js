@@ -12,7 +12,7 @@ function App() {
       <div className="App">
       <Header></Header>
       <Route path={["/login"]} component={() => <Login />} />
-      <Route path={["/home", "/"]} component={() => <Home />} />
+      <Route exact path={["/home", "/"]} component={() => <Home />} />
       <Route path={["/charProfile"]} component={CharProfile}/>
       <Route path={["/searchResult"]} component={() => <SearchResult />} />
       <Footer></Footer>
