@@ -13,7 +13,7 @@ class App extends Component {
   constructor(props) {
     super(props);
     if (localStorage.getItem("team") == undefined) {
-      localStorage.setItem("team", JSON.stringify(team))
+      localStorage.setItem("team", JSON.stringify([]))
     }
     this.state = {
       team: JSON.parse(localStorage.getItem("team"))
@@ -27,11 +27,13 @@ class App extends Component {
       return hero.id !== id;
     })
     this.setState({ team: filterId })
+    localStorage.setItem("team", JSON.stringify(this.state.team))
   }
   addChar(hero) {
     var team = this.state.team;
     team.push(hero)
     this.setState({ team: team})
+    localStorage.setItem("team", JSON.stringify(this.state.team))
   }
 
   render() {

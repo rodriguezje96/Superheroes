@@ -9,28 +9,28 @@ const Stats = (props) => {
                 <tbody>
                     <tr className="row">
                         <td className="card-text col-3">Intelligence</td>
-                        <td className="card-text col-9">{props.stats.intelligence.reduce(reducer)}</td>
+                        <td className="card-text col-9">{props.stats.intelligence.reduce(reducer, 0)}</td>
                     </tr>
                     <tr className="row">
                         <td className="card-text col-3">Strength</td>
-                        <td className="card-text col-9">{props.stats.strength.reduce(reducer)}</td>
+                        <td className="card-text col-9">{props.stats.strength.reduce(reducer, 0)}</td>
                     </tr>
                     <tr className="row">
                         <td className="card-text col-3">Speed</td>
-                        <td className="card-text col-9">{props.stats.speed.reduce(reducer)}</td>
+                        <td className="card-text col-9">{props.stats.speed.reduce(reducer, 0)}</td>
                     </tr>
 
                     <tr className="row">
                         <td className="card-text col-3">Durability</td>
-                        <td className="card-text col-9">{props.stats.durability.reduce(reducer)}</td>
+                        <td className="card-text col-9">{props.stats.durability.reduce(reducer, 0)}</td>
                     </tr>
                     <tr className="row">
                         <td className="card-text col-3">Power</td>
-                        <td className="card-text col-9">{props.stats.power.reduce(reducer)}</td>
+                        <td className="card-text col-9">{props.stats.power.reduce(reducer, 0)}</td>
                     </tr>
                     <tr className="row">
                         <td className="card-text col-3">Combat</td>
-                        <td className="card-text col-9">{props.stats.combat.reduce(reducer)}</td>
+                        <td className="card-text col-9">{props.stats.combat.reduce(reducer, 0)}</td>
                     </tr>
                 </tbody>
             </table>

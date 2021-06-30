@@ -22,7 +22,7 @@ class CharProfile extends Component {
                 </div>
 
                 <div className="col-9">
-                    <table className="table table-bordered table-striped">
+                    <table className="table table-striped container mx-auto table-dark table-sm">
                         <tr className="row">
                             <th className="card-text col-3">Name</th>
                             <th className="card-text col-9">{this.state.character?.name}</th>
